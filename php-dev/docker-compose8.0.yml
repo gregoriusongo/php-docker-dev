@@ -14,7 +14,7 @@ services:
   php-fpm:
     build:
       context: .
-      dockerfile: php7.4-dockerfile
-    image: custom-php7.4
+      dockerfile: php8.0-dockerfile
+    image: custom-php8.0
     volumes:
       - ../web-src:/var/www/html
