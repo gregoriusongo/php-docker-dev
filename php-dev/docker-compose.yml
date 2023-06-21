@@ -16,5 +16,7 @@ services:
       context: .
       dockerfile: php7.4-dockerfile
     image: custom-php7.4
+    expose:
+      - 9003 # for xdebug
     volumes:
       - ../web-src:/var/www/html
