@@ -3,3 +3,4 @@ web-src/*
 !web-src/info.php
 !web-src/_put your web code here.txt
 !web-src/example-dir/index.html
+.DS_STORE
