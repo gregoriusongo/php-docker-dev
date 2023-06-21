@@ -7,7 +7,7 @@ services:
       - "80:80"
     volumes:
       - ../web-src:/var/www/html
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - php-fpm
 
@@ -20,3 +20,5 @@ services:
       - 9003 # for xdebug
     volumes:
       - ../web-src:/var/www/html
+      - ./config/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini # for xdebug
+      - ./config/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini # for error reporting
